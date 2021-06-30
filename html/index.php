@@ -16,15 +16,14 @@
             </div>
         </header>
         <section id="showcase">
-            <div class="container">
+            <div class="container1">
                 <h1>Connect With Friends</h1>
                 <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint architecto maiores, assumenda minus ullam consectetur nemo mollitia cumque dignissimos tempore autem odio ab. Quisquam, sunt minus facere quo inventore explicabo.
+                    Lorem, ipsum dolor sit amet consectetur. 
                 </p>
             </div>
-        </section>
-        <section id="login">
-            <div class="container">
+
+            <div class="container2">
                 <form>
                     <h1>Login</h1>
                     <label>Username</label>

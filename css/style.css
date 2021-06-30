@@ -1,4 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;700;900&display=swap');
+* {box-sizing: border-box}
+/* Global */
+body
+{
+    font-family: 'Poppins', sans-serif;
+    background-color: #100146;
+    color: #e3e3e5;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+    
+}
+.container
+{
+    width: 100%;
+    margin:20px ;
+    overflow: hidden;
+    border:1px solid green;
+}
+ul
+{
+    margin:0;
+    padding: 0;
+    
+}
+/* Header */
 header
 {
-    background-color: blue;
+    padding-top: 30px;
+    min-height: 50px;
+    border:1px solid rgb(243, 241, 114);
+}
+header a
+{
+    color: #e3e3e5;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    border:1px solid rgb(213, 238, 213);
+}
+header li
+{
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px;
+    border:1px solid rgb(213, 238, 213);
+}
+header #branding
+{
+    float: left;
+    border:1px solid rgb(213, 238, 213);
+}
+header #branding h1
+{
+    margin: 0;
+    border:1px solid rgb(213, 238, 213);
+}
+header nav
+{
+    float: right;
+    margin-top: 0px;
+}
+header a:hover
+{   
+    background-color: #e3e3e5;
+    color: #100146 ;
+}
+/* showcase */
+#showcase .container1
+{
+    margin-left: 50px;
+    float: left;
+    overflow: hidden;
+    border:1px solid green;
+    min-height: 400px;
+    width: 40%;
+    text-align: left;
+    
+}
+#showcase .container1 h1
+{
+    
+    font-size: 40px;
+    margin-top: 150px;
+    margin-bottom: 10px;  
+}
+#showcase .container2
+{
+    margin-right: 50px;
+    float: right;
+    overflow: hidden;
+    border:1px solid green;
+    min-height: 400px;
+    width: 40%;
+    text-align: left;
+    
 }
