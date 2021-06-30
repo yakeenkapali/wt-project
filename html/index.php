@@ -1,11 +1,4 @@
-<html>
-    <title>
-        Kurakani
-    </title>
-    <head>
-        <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" type="text/css" href="../css/style.css">
-    </head>
+<?php require_once "head.html" ?> 
     <body>
         <header>
             <div class="container">
@@ -38,7 +31,8 @@
                     <input type="text" name="username" placeholder="Enter your username"><br>
                     <label>Password</label>
                     <input type="password" name="password" placeholder="Enter your password">
-                    <input type="submit" placeholder="Login">
+                    <button type="submit" class="button1">Login</button>
+                    <a href="signup.php">SignUp</a> 
                 </form>
             </div>
         </section>
