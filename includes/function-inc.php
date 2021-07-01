@@ -1,6 +1,6 @@
 <?php
 
-    function (emptyinputsignup($name, $email, $username, $password, $reppassword) {
+    function emptyinputsignup($name, $email, $username, $password, $reppassword) {
         $result;
         if (empty($name) || empty($email) || empty($username) || empty($password) || empty($reppassword)){
             $result = true;
@@ -11,7 +11,7 @@
         return $result;
     }
 
-    function (invalidusername($username) {
+    function invalidusername($username) {
         $result;
         if (!preg_match("/^[a-zA-Z0-9]*$/", $username)){
             $result = true;
@@ -23,7 +23,7 @@
     }
 
     
-    function (invalidemail($email) ){
+    function invalidemail($email) {
         $result;
         if (!filter_var($email,FILTER_VALIDATE_EMAIL)) {
             $result = true;
@@ -35,7 +35,7 @@
     }
 
      
-    function (passwordmatch($password, $reppassword)){
+    function passwordmatch($password, $reppassword){
         $result;
         if ($password !== $reppassword) {
             $result = true;
@@ -46,7 +46,7 @@
         return $result;
     }
 
-    function (usernameexists($conn, $username, $email)){
+    function usernameexists($conn, $username, $email){
         $sql = "SELECT  * FROM user WHERE userUid = ? OR userEmail =?;";
         $stmt = mysqli_stmt_init($conn); 
         
@@ -71,10 +71,10 @@
 
 
     function createuser($conn, $name, $email, $username, $password){
-        $sql = "INSERT INTO user (userName, userEmail, userUid, userPwd) VALUES (?,?,?,?);"
+        $sql = "INSERT INTO user (userName, userEmail, userUid, userPwd) VALUES (?,?,?,?);";
         $stmt = mysqli_stmt_init($conn); 
         
-        if(mysqli_stmt_prepare($stmt, $sql)){
+        if(!mysqli_stmt_prepare($stmt, $sql)){
             header("location: ../html/signup.php?error=stmtfailed");
             exit();
         }

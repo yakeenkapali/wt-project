@@ -9,7 +9,7 @@
         require_once 'conn.php';
         require_once 'function-inc.php';
 
-        if(emptyinputsignup($name $email, $username, $password, $reppassword) !== false){
+        if(emptyinputsignup($name, $email, $username, $password, $reppassword) !== false){
             header("location: ../html/signup.php?error=emptyinput");
             exit();
         }

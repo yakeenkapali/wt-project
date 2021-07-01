@@ -1,12 +1,12 @@
 <?php
-    $hostname="localhost"
-    $username="root"
-    $password=""
-    $dbname="kurakani"
+    $hostname= "localhost";
+    $username= "root";
+    $password= "";
+    $dbname= "kurakani";
 
-    $conn_mysqli($hostname,$username,$password,$dbname):
+    $conn= mysqli_connect($hostname,$username,$password,$dbname);
 
     if(!$conn){
-        die("Connection Failed". mysqli_connect_error()):
+        die("Connection Failed". mysqli_connect_error());
     }
 ?>
