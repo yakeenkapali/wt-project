@@ -4,7 +4,7 @@
     <section id="signup">
         <div class="Container">
             <h1>SignUp</h1>
-            <form>
+            <form action="../includes/signup-inc.php" method="post">
                 <label>First Name</label>
                 <input type="text" name="firstname" ><br>
                 <label>Last Name</label>
@@ -17,7 +17,7 @@
                 <input type="password" name="password" ><br>
                 <label>Retype Password</label>
                 <input type="password" name="password2" ><br>
-                <button type="submit" class="button2"> Sign Up </button>
+                <button type="submit" name="button2" class="button2"> Sign Up </button>
             </form>
         </div>
     </section>

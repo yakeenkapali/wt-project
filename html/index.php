@@ -7,7 +7,7 @@
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.php">Home</a></li>
                         <li><a href="index.html">Messages</a></li>    
                         <li><a href="index.html">About</a></li>
                         <li><a href="index.html">Notifications</a></li>
@@ -24,7 +24,7 @@
             </div>
 
             <div class="container2">
-                <form>
+                <form action="../includes/login-inc.php" method="post">
                     <h1>Login</h1>
                     <label>Username</label>
                     <input type="text" name="username" placeholder="Enter your username"><br>
