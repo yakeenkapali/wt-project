@@ -1,6 +1,6 @@
 <?php
 
-    function emptyinputsignup($name, $email, $username, $password, $reppassword) {
+    function emptyinputs($name, $email, $username, $password, $reppassword) {
         $result;
         if (empty($name) || empty($email) || empty($username) || empty($password) || empty($reppassword)){
             $result = true;
@@ -43,6 +43,7 @@
         else{
             $result= false;
         }
+        echo("function".$reppassword);
         return $result;
     }
 
@@ -50,13 +51,13 @@
         $sql = "SELECT  * FROM user WHERE userUid = ? OR userEmail =?;";
         $stmt = mysqli_stmt_init($conn); 
         
-        if(mysqli_stmt_prepare($stmt, $sql)){
+        if(!mysqli_stmt_prepare($stmt, $sql)){
             header("location: ../html/signup.php?error=stmtfailed");
             exit();
         }
         
-        mysqli_stmt_bind_param($stmt, "ss", $email, );
-        mysqli_stmt_exeute($stmt);
+        mysqli_stmt_bind_param($stmt, "ss", $username, $email );
+        mysqli_stmt_execute($stmt);
 
         $resultData = mysqli_stmt_get_result($stmt);
 
@@ -79,13 +80,13 @@
             exit();
         }
         
-        $hashedpassowrd = password_hash($password, PASSWORD_DEFAULT);
+        $hashedpassword = password_hash($password, PASSWORD_DEFAULT);
 
-        mysqli_stmt_bind_param($stmt, "ssss", $name, $email, $username, $hashedpassowrd );
-        mysqli_stmt_exeute($stmt);
+        mysqli_stmt_bind_param($stmt, "ssss", $name, $email, $username, $hashedpassword );
+        mysqli_stmt_execute($stmt);
         mysqli_stmt_close($stmt);
         header("location: ../html/signup.php?error=none");
-            exit();
+        exit();
     }
 
 
