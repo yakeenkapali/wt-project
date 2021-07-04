@@ -17,7 +17,6 @@ body
     width: 100%;
     margin:20px ;
     overflow: hidden;
-    border:1px solid green;
 }
 ul
 {
@@ -28,9 +27,10 @@ ul
 /* Header */
 header
 {
+    background-color: black;
     padding-top: 30px;
     min-height: 50px;
-    border:1px solid rgb(243, 241, 114);
+    
 }
 header a
 {
@@ -38,24 +38,22 @@ header a
     text-decoration: none;
     text-transform: uppercase;
     font-size: 16px;
-    border:1px solid rgb(213, 238, 213);
+    background-color: chartreuse;
+
 }
 header li
 {
     float: left;
     display: inline;
     padding: 0 20px 0 20px;
-    border:1px solid rgb(213, 238, 213);
 }
 header #branding
 {
     float: left;
-    border:1px solid rgb(213, 238, 213);
 }
 header #branding h1
 {
     margin: 0;
-    border:1px solid rgb(213, 238, 213);
 }
 header nav
 {
@@ -73,7 +71,6 @@ header a:hover
     margin-left: 50px;
     float: left;
     overflow: hidden;
-    border:1px solid green;
     min-height: 400px;
     width: 40%;
     text-align: left;
@@ -91,7 +88,6 @@ header a:hover
     margin-right: 50px;
     float: right;
     overflow: hidden;
-    border:1px solid green;
     min-height: 400px;
     width: 40%;
     text-align: left;

@@ -1,5 +1,5 @@
 <?php
-
+    //Signup
     function emptyinputs($name, $email, $username, $password, $reppassword) {
         $result;
         if (empty($name) || empty($email) || empty($username) || empty($password) || empty($reppassword)){
@@ -85,10 +85,53 @@
         mysqli_stmt_bind_param($stmt, "ssss", $name, $email, $username, $hashedpassword );
         mysqli_stmt_execute($stmt);
         mysqli_stmt_close($stmt);
+        
+    
         header("location: ../html/signup.php?error=none");
+       
+        
+        header("location: ../html/index.php");
         exit();
     }
 
+    // login  
+
+    function emptyinputslogin($username, $password) {
+        $result;
+        if (empty($username) || empty($password)){
+            $result = true;
+        }
+        else{
+            $result= false;
+        }
+        return $result;
+    }
+
+    function loginUser($conn, $username, $password){
+        $usernameexists = usernameexists($conn, $username, $email);
+
+        if($usernameexists === false){
+            header("location: ../html/index.php?error=wronglogin");
+            exit();
+        }
+
+        $hashedpassword = $usernameexists["userPassword"];
+        $checkPassword = password_verify($password, $reppassword);
+
+        if($checkPassword === false){
+            header("location: ../html/index.php?error=wronglogin");
+            exit();
+        }
+
+        
+        if($checkPassword === true){
+            session_start();
+            $_SESSION["userid"] = $usernameexists["userId"];
+            $_SESSION["useruid"] = $usernameexists["userUid"];
+            header("location: ../html/messages.php");
+            exit();
+        }
+    }
 
     
 

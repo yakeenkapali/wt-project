@@ -1,4 +1,4 @@
-<?php require_once "head.html" ?>
+<?php require_once "head.php" ?>
 
 <body>
     <section id="signup">
@@ -28,13 +28,13 @@
             else if($_GET["error"] == "invalidusername"){
                 echo "<p> Invalid Username! </p>";
             }
-            else if($_GET["error"] == "passworddontmatch"){
+            else if($_GET["error"] == "passwordmatch"){
                 echo "<p> Invalid Password dont match! </p>";
             }
             else if($_GET["error"] == "stmtfailed"){
                 echo "<p> Try again! </p>";
             }
-            else if($_GET["error"] == "usernametaken"){
+            else if($_GET["error"] == "usernameexists"){
                 echo "<p> Username Taken! </p>";
             }    
             else if($_GET["error"] == "none"){
