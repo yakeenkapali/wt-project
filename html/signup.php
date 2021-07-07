@@ -28,13 +28,13 @@
             else if($_GET["error"] == "invalidusername"){
                 echo "<p> Invalid Username! </p>";
             }
-            else if($_GET["error"] == "passwordmatch"){
+            else if($_GET["error"] == "passworddontmatch"){
                 echo "<p> Invalid Password dont match! </p>";
             }
             else if($_GET["error"] == "stmtfailed"){
                 echo "<p> Try again! </p>";
             }
-            else if($_GET["error"] == "usernameexists"){
+            else if($_GET["error"] == "usernametaken"){
                 echo "<p> Username Taken! </p>";
             }    
             else if($_GET["error"] == "none"){

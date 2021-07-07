@@ -68,7 +68,7 @@
             $result= false;
             return $result;
         }
-    }
+}
 
 
     function createuser($conn, $name, $email, $username, $password){
@@ -115,8 +115,8 @@
             exit();
         }
 
-        $hashedpassword = $usernameexists["userPassword"];
-        $checkPassword = password_verify($password, $reppassword);
+        $hashedpassword = $usernameexists["userPwd"];
+        $checkPassword = password_verify($password, $hashedpassword);
 
         if($checkPassword === false){
             header("location: ../html/index.php?error=wronglogin");
@@ -132,6 +132,7 @@
             exit();
         }
     }
+
 
     
 
