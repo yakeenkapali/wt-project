@@ -17,7 +17,7 @@
 
         
         if(invalidusername($username) !== false){
-            header("Location: ../html/signup.php?error=invaliduseranme");
+            header("Location: ../html/signup.php?error=invalidusername");
             exit();
         }
 

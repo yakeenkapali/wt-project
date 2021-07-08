@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;700;900&display=swap');
+* {box-sizing: border-box}
+
+::-webkit-scrollbar{
+    width: 8px;
+    background: #100146;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background: linear-gradient(to top, #C82ECC, #DE5076);
+}
+
+/* Signup Design */
+
+
+body{
+    background: none;
+    background-color: #e3e3e5 ;
+}
+
+.container {
+    text-align: center;
+    color: #100146;
+    margin: 9em auto 3em auto;
+    width: 80%;
+    border: none;
+    border-radius: 15px;
+    text-decoration: none;
+    overflow: auto;
+}
+
+.container h1{
+    font-size: 2em;
+    padding-top: 0.7em ;
+    padding-bottom: 0.5em;
+}
+
+input {
+    border-radius: 20px;
+    line-height: 2;
+    border: none;
+    background-color: #acacac;
+    padding-left: 1.5em;
+    margin-bottom: 1.em;
+    font-size: 1.1em;
+}
+label{
+    font-size: 1em;
+    text-align: none;
+    text-align: left;
+}
+
+button{
+    background-color: #100146;
+    border: none;
+    color: #e3e3e5;
+    border-radius: 30px;
+    font-size: 1.5em;
+    padding: 0.4em 1em;
+    margin-top: 1em;
+} 
+.container p{
+    font-size: 1.1em;
+    padding-bottom: 2em;
+}
+
+.container p a{
+    font-weight: bold;
+    text-decoration: none;
+    color: #100146;
+}
+
+#uid{
+    float: left;
+    padding-left: 15%;
+}
+
+p{
+    color: red;
+}

@@ -1,6 +1,7 @@
 <?php 
     require_once 'head.php';
 ?> 
+    
     <body>
         <header>
             <div class="container">    
@@ -11,9 +12,9 @@
                 <nav class="navtext">
                     <ul>
                         <li><a href="index.php">Home</a></li>
-                        <li><a href="index.html">Messages</a></li>    
-                        <li><a href="index.html">About</a></li>
-                        <li><a href="index.html">Notifications</a></li>
+                        <li><a href="messages.php">Messages</a></li>    
+                        <li><a href="messages.php">About</a></li>
+                        <li><a href="messages.php">Notifications</a></li>
                     </ul>
                 </nav>
                 <nav class="navicon">
@@ -25,8 +26,8 @@
                 </ul>
                 </nav>
                 <div class="container1 ">
-                    <h1>Connect With </h1> <h1> Friends</h1>
-                    <p>Chat Any Time <br> Any Where</p>
+                    <h1>Connect with </h1> <h1> Friends</h1>
+                    <p>Chat any time <br> any where</p>
                 </div>
 
             </div>
@@ -61,9 +62,6 @@
         }       
     ?>
         </section>
-        <footer>
-            <p>Responsive in all Mobiles, Tablets and Desktop layouts. </p>
-        </footer>
     </body>
 
 </html>
