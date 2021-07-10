@@ -1,1 +1,2 @@
-This is wt-project(Kurakani).
+# Kurakani
+## This is Web Technology Project.
