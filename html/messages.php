@@ -13,28 +13,29 @@
 
         color: #e3e3e3;
         background-color: #100146;
+        font-family: 'Poppins', 'sans-serif';
         /* background-size: 100%; */
     }
-    div{
-        position: absolute;
-        top: 50%;
-        left: 45%;
+    .container{
+        display: grid;
+        place-items: center;
+        margin-top: 18.75em;
+
     }
-    img{
-        width: 50%;
+    .img{
+        width: 12.5em;
     }
-    footer{
-        font-family: 'Poppins', 'sans-serif';
-    }
+
 </style>
 
 
 <body>
-    <div>
-        <img src="../images/load.svg" alt="loading">
+    <div class= "container">
+        <img class= "img" src="../images/load.svg" alt="loading">
+        <div class="text">
+            <p>Sorry, We're in developing phase! </p>
+        </div>
 </div>
-    <footer>
-        <p>Sorry, We're in developing phase! </p>
-    </footer>
+
 </body>
 </html>

@@ -90,7 +90,7 @@
         header("location: ../html/signup.php?error=none");
        
         
-        header("location: ../html/index.php");
+        header("location: ../index.php");
         exit();
     }
 
@@ -111,7 +111,7 @@
         $usernameexists = usernameexists($conn, $username, $email);
 
         if($usernameexists === false){
-            header("location: ../html/index.php?error=wronglogin");
+            header("location: ../index.php?error=wronglogin");
             exit();
         }
 
@@ -119,7 +119,7 @@
         $checkPassword = password_verify($password, $hashedpassword);
 
         if($checkPassword === false){
-            header("location: ../html/index.php?error=wronglogin");
+            header("location: ../index.php?error=wronglogin");
             exit();
         }
 
@@ -128,7 +128,7 @@
             session_start();
             $_SESSION["userid"] = $usernameexists["userId"];
             $_SESSION["useruid"] = $usernameexists["userUid"];
-            header("location: ../html/messages.php");
+            header("location: ../html/logged-in.php");
             exit();
         }
     }

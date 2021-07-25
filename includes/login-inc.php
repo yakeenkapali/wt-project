@@ -13,7 +13,7 @@ if(isset($_POST["button1"])){
    
 
     if(emptyinputslogin($username, $password) !== false){
-        header("Location: ../html/index.php?error=emptyinputs");
+        header("Location: ../index.php?error=emptyinputs");
         //echo($username."<br>".$password);
         exit();
     }
@@ -22,7 +22,7 @@ if(isset($_POST["button1"])){
     
 else{
     loginUser($conn, $username, $password);
-    header("location: ../html/messages.php");
+    header("location: ../html/logged-in.php");
     exit();
 }
 }
